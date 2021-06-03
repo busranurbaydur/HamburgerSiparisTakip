@@ -136,6 +136,7 @@ namespace HamburgerSiparisTakip
             this.btmSiparisTamamla.TabIndex = 34;
             this.btmSiparisTamamla.Text = "Siparişi Tamamla";
             this.btmSiparisTamamla.UseVisualStyleBackColor = true;
+            this.btmSiparisTamamla.Click += new System.EventHandler(this.btmSiparisTamamla_Click);
             // 
             // lblToplamTutar
             // 

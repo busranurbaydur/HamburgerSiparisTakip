@@ -108,5 +108,26 @@ namespace HamburgerSiparisTakip
         {
 
         }
+
+        //Sipariş tamamla butonu işlemleri
+        private void btmSiparisTamamla_Click(object sender, EventArgs e)
+        {
+            string mesaj = "Toplam Siparis Ucreti:" + TutarHesapla().ToString() + " Satin Almayi Tamamlamak Ister misiniz?";
+            DialogResult dr = MessageBox.Show(mesaj, "Siparis Bilgisi ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dr == DialogResult.Yes)
+            {
+                //lblToplamTutar.Text = "Siparis Onaylandi";
+
+                lstSiparisler.Items.Clear();
+                mevcutsiparis.Clear();
+                TutarHesapla();
+                MessageBox.Show("Siparis Tamamlandi");
+                
+            }
+            else
+            {
+                MessageBox.Show("Siparis iptal Edildi");
+            }
+        }
     }
 }
