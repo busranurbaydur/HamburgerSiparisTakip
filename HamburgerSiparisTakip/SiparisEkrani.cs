@@ -71,6 +71,7 @@ namespace HamburgerSiparisTakip
             lstSiparisler.Items.Add(yeniSiparis);
 
             TutarHesapla();
+            Tools.Temizle(this.Controls);
 
         }
 
@@ -122,7 +123,7 @@ namespace HamburgerSiparisTakip
                 mevcutsiparis.Clear();
                 TutarHesapla();
                 MessageBox.Show("Siparis Tamamlandi");
-                
+                Tools.Temizle(this.Controls);
             }
             else
             {
