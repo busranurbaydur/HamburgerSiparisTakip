@@ -16,5 +16,19 @@ namespace HamburgerSiparisTakip
         {
             InitializeComponent();
         }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+            Menu m = new Menu();
+            m.MenuAdi = txtMenuAdi.Text;
+            m.Fiyati = nmrFiyat.Value;
+            m.Id = SiparisEkrani.menuler.Count + 1;
+            SiparisEkrani.menuler.Add(m);
+
+            txtMenuAdi.Text = "";
+            nmrFiyat.Value = 1;
+
+            MessageBox.Show("Başariyla Eklendi");
+        }
     }
 }
