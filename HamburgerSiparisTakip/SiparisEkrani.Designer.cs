@@ -186,7 +186,7 @@ namespace HamburgerSiparisTakip
             this.lstSiparisler.Location = new System.Drawing.Point(246, 11);
             this.lstSiparisler.Margin = new System.Windows.Forms.Padding(2);
             this.lstSiparisler.Name = "lstSiparisler";
-            this.lstSiparisler.Size = new System.Drawing.Size(286, 316);
+            this.lstSiparisler.Size = new System.Drawing.Size(450, 316);
             this.lstSiparisler.TabIndex = 29;
             this.lstSiparisler.SelectedIndexChanged += new System.EventHandler(this.lstSiparisler_SelectedIndexChanged);
             // 

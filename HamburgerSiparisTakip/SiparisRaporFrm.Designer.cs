@@ -161,6 +161,7 @@ namespace HamburgerSiparisTakip
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SiparisRaporFrm";
             this.Text = "SiparisRaporFrm";
+            this.Load += new System.EventHandler(this.SiparisRaporFrm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
