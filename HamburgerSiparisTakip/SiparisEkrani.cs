@@ -43,7 +43,47 @@ namespace HamburgerSiparisTakip
 
         private void btnSiparisEkle_Click(object sender, EventArgs e)
         {
+            Siparis yeniSiparis = new Siparis();
+            yeniSiparis.SeciliMenu = (Menu)cbMenuler.SelectedItem;
 
+            if (rbKucuk.Checked)
+                yeniSiparis.Boyut = Boyut.Kucuk;
+            if (rbOrta.Checked)
+                yeniSiparis.Boyut = Boyut.Orta;
+            if (rbBuyuk.Checked)
+                yeniSiparis.Boyut = Boyut.Buyuk;
+
+            yeniSiparis.Adet = (int)nmrAdet.Value;
+
+            List<Extra> extras = new List<Extra>();
+            foreach (CheckBox item in flpExtraMalzemeler.Controls)
+            {
+                if (item.Checked)
+                {
+                    extras.Add((Extra)item.Tag);
+                }
+            }
+            yeniSiparis.ExtraMalzeme = extras;
+            yeniSiparis.Hesapla();
+            mevcutsiparis.Add(yeniSiparis);
+
+            siparisler.Add(yeniSiparis);
+            lstSiparisler.Items.Add(yeniSiparis);
+
+            TutarHesapla();
+
+        }
+
+        private decimal TutarHesapla()
+        {
+            decimal toplamTutar = 0;
+            foreach (Siparis siparis in lstSiparisler.Items)
+            {
+                toplamTutar += siparis.ToplamTutar;
+            }
+            lblToplamTutar.Text = toplamTutar.ToString();
+
+            return toplamTutar;
         }
 
         private void SiparisEkrani_Load(object sender, EventArgs e)
