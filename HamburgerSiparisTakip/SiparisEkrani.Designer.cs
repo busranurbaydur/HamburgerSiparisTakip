@@ -187,6 +187,7 @@ namespace HamburgerSiparisTakip
             this.lstSiparisler.Name = "lstSiparisler";
             this.lstSiparisler.Size = new System.Drawing.Size(286, 316);
             this.lstSiparisler.TabIndex = 29;
+            this.lstSiparisler.SelectedIndexChanged += new System.EventHandler(this.lstSiparisler_SelectedIndexChanged);
             // 
             // btnSiparisEkle
             // 
@@ -197,6 +198,7 @@ namespace HamburgerSiparisTakip
             this.btnSiparisEkle.TabIndex = 28;
             this.btnSiparisEkle.Text = "Sipariş Ekle";
             this.btnSiparisEkle.UseVisualStyleBackColor = true;
+            this.btnSiparisEkle.Click += new System.EventHandler(this.btnSiparisEkle_Click);
             // 
             // cbMenuler
             // 
@@ -229,7 +231,7 @@ namespace HamburgerSiparisTakip
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // SiparisEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -248,8 +250,9 @@ namespace HamburgerSiparisTakip
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "SiparisEkrani";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.SiparisEkrani_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrAdet)).EndInit();

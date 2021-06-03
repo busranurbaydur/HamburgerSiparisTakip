@@ -31,9 +31,9 @@ namespace HamburgerSiparisTakip
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.siparisYonetimiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.urunYonetimiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.siparisOlusturToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.siparisBilgileriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.urunYonetimiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.extraMalzemelerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -59,6 +59,20 @@ namespace HamburgerSiparisTakip
             this.siparisYonetimiToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
             this.siparisYonetimiToolStripMenuItem.Text = "Siparis Yonetimi";
             // 
+            // siparisOlusturToolStripMenuItem
+            // 
+            this.siparisOlusturToolStripMenuItem.Name = "siparisOlusturToolStripMenuItem";
+            this.siparisOlusturToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.siparisOlusturToolStripMenuItem.Text = "Siparis Olustur";
+            this.siparisOlusturToolStripMenuItem.Click += new System.EventHandler(this.siparisOlusturToolStripMenuItem_Click);
+            // 
+            // siparisBilgileriToolStripMenuItem
+            // 
+            this.siparisBilgileriToolStripMenuItem.Name = "siparisBilgileriToolStripMenuItem";
+            this.siparisBilgileriToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.siparisBilgileriToolStripMenuItem.Text = "Siparis Bilgileri";
+            this.siparisBilgileriToolStripMenuItem.Click += new System.EventHandler(this.siparisBilgileriToolStripMenuItem_Click);
+            // 
             // urunYonetimiToolStripMenuItem
             // 
             this.urunYonetimiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -68,29 +82,19 @@ namespace HamburgerSiparisTakip
             this.urunYonetimiToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.urunYonetimiToolStripMenuItem.Text = "Urun Yonetimi";
             // 
-            // siparisOlusturToolStripMenuItem
-            // 
-            this.siparisOlusturToolStripMenuItem.Name = "siparisOlusturToolStripMenuItem";
-            this.siparisOlusturToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.siparisOlusturToolStripMenuItem.Text = "Siparis Olustur";
-            // 
-            // siparisBilgileriToolStripMenuItem
-            // 
-            this.siparisBilgileriToolStripMenuItem.Name = "siparisBilgileriToolStripMenuItem";
-            this.siparisBilgileriToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.siparisBilgileriToolStripMenuItem.Text = "Siparis Bilgileri";
-            // 
             // menuEkleToolStripMenuItem
             // 
             this.menuEkleToolStripMenuItem.Name = "menuEkleToolStripMenuItem";
             this.menuEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.menuEkleToolStripMenuItem.Text = "Menu Ekle";
+            this.menuEkleToolStripMenuItem.Click += new System.EventHandler(this.menuEkleToolStripMenuItem_Click);
             // 
             // extraMalzemelerToolStripMenuItem
             // 
             this.extraMalzemelerToolStripMenuItem.Name = "extraMalzemelerToolStripMenuItem";
             this.extraMalzemelerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.extraMalzemelerToolStripMenuItem.Text = "Extra Malzemeler";
+            this.extraMalzemelerToolStripMenuItem.Click += new System.EventHandler(this.extraMalzemelerToolStripMenuItem_Click);
             // 
             // AnaForm
             // 

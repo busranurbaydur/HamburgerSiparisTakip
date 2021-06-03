@@ -12,5 +12,11 @@ namespace HamburgerSiparisTakip
         public string MenuAdi { get; set; }
         public decimal Fiyati { get; set; }
 
+        //Siparis ekranında namespace ve class adı yazıyordu. Onu ezmek için yapıldı.
+        public override string ToString()
+        {
+            return MenuAdi + " Menu";
+        }
+
     }
 }
